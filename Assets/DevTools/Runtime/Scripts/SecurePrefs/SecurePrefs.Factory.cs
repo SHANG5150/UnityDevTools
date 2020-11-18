@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 using UnityEngine;
 
 namespace DevTools
@@ -46,7 +45,7 @@ namespace DevTools
 
 			public static SecurePrefs CreateBinaryPrefs()
 			{
-				return CreateBinaryPrefs($"{Environment.CurrentDirectory}/PlayerPrefs.bin");
+				return CreateBinaryPrefs($"{Application.persistentDataPath}/PlayerPrefs.dat");
 			}
 		}
 	}
