@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc014a6ac59f424596a17a1a27020ca, type: 3}
+  m_Name: OnlineAuthorizationSettings
+  m_EditorClassIdentifier: 
+  settings:
+    Id: Example
+    authSettings:
+      AuthUrl: https://script.google.com/macros/s/AKfycbzfZu-_NhPh4u8GGR_lJ9lSNUkuk6nds6Z3gGFol2w-08dg1Cc/exec
+      OkResponse: IsAuthed
+      KeyFieldName: deviceKey
+      TagFieldName: tag
+      Tag: DevToolsExample
