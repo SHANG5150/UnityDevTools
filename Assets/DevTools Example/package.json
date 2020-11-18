@@ -1,13 +1,13 @@
 {
-    "name": "com.shang.unity-dev-tools",
+    "name": "com.shang.unity-dev-tools-example",
     "version": "0.1.0",
     "unity": "2019.4",
-    "displayName": "Unity Dev Tools",
-    "description": "This package provides frequently used tools for Unity project development.",
+    "displayName": "Unity Dev Tools Example",
+    "description": "This is a example usage based on Unity Dev Tools.",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/SHANG5150/UnityDevTools.git?path=/Assets/DevTools"
+        "url": "https://github.com/SHANG5150/UnityDevTools.git?path=/Assets/DevTools%20Example"
     },
     "author": {
         "name": "SHANG5150",
