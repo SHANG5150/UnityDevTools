@@ -9,6 +9,9 @@
         "type": "git",
         "url": "https://github.com/SHANG5150/UnityDevTools.git?path=/Assets/DevTools%20Example"
     },
+    "dependencies": {
+        "com.shang.unity-dev-tools": "0.1.0"
+    },
     "author": {
         "name": "SHANG5150",
         "email": "f51509891@gmail.com",
