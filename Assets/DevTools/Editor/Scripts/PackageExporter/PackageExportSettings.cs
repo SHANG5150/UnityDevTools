@@ -1,11 +1,10 @@
-﻿using DevTools.Editor;
-using System;
+﻿using System;
 using UnityEngine;
 
-namespace DevTools.Example.Editor
+namespace DevTools.Editor
 {
-	[CreateAssetMenu(fileName = "new ExportPackageInfo", menuName = "DevTools/Export Package Info", order = 0)]
-	public class ExportPackageInfo : ScriptableObject
+	[CreateAssetMenu(fileName = "new PackageExportSettings", menuName = "DevTools/Package Export Settings", order = 0)]
+	public class PackageExportSettings : ScriptableObject
 	{
 		[Serializable]
 		public class Settings
