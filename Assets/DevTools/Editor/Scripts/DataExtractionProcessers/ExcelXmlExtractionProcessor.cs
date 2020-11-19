@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace DevTools.Editor
 {
-	public class ExcelXmlExtractionProcesser : IDataExtraction
+	public class ExcelXmlExtractionProcessor : IDataExtraction
 	{
 		private readonly ScriptableObject container;
 		private readonly XDocument xDoc;
@@ -21,7 +21,7 @@ namespace DevTools.Editor
 
 		private Dictionary<string, SetValueAction> setValueActions;
 
-		public ExcelXmlExtractionProcesser(TextAsset xmlTextAsset, ScriptableObject container)
+		public ExcelXmlExtractionProcessor(TextAsset xmlTextAsset, ScriptableObject container)
 		{
 			this.container = container;
 			xDoc = XDocument.Parse(xmlTextAsset.text);

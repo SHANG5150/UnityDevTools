@@ -23,7 +23,7 @@ namespace DevTools.Example.Editor
 			var container = settings[containerTypeName].Container;
 			EditorUtility.SetDirty(container);
 
-			var excelXmlProcess = new ExcelXmlExtractionProcesser(xmlFile, container);
+			var excelXmlProcess = new ExcelXmlExtractionProcessor(xmlFile, container);
 
 			DataExtractor extractor = new DataExtractor(excelXmlProcess);
 			extractor.Extract(fillMethod);
