@@ -9,7 +9,7 @@ namespace DevTools
 		private string folderPath;
 		private int superSize;
 
-		public Screenshot() : this(folderPath: Path.Combine(Environment.CurrentDirectory, "Screenshots"))
+		public Screenshot() : this(folderPath: Path.Combine(Application.persistentDataPath, "Screenshots"))
 		{
 		}
 
