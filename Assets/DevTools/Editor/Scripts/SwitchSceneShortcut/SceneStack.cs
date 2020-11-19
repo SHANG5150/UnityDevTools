@@ -12,9 +12,9 @@ namespace DevTools.Editor
 	{
 		public class Factory
 		{
-			public static SceneStack Create()
+			public static SceneStack Create(string id)
 			{
-				return AssetUtility.FindScriptableObjectAsset<SceneStack>();
+				return AssetUtility.FindScriptableObjectAssets<SceneStack>(x => x.settings.Id == id).First();
 			}
 		}
 
@@ -27,17 +27,15 @@ namespace DevTools.Editor
 		}
 
 		[SerializeField]
-		private List<Settings> settingsGroup;
+		private Settings settings;
 
-		public void Construct(List<Settings> settingsGroup)
+		public void Construct(Settings settings)
 		{
-			this.settingsGroup = settingsGroup;
+			this.settings = settings;
 		}
 
-		public void OpenSceneStack(string id)
+		public void OpenSceneStack()
 		{
-			Settings settings = GetSettings(id);
-
 			string singleScenePath = AssetDatabase.GetAssetPath(settings.Single);
 
 			EditorSceneManager.OpenScene(singleScenePath, OpenSceneMode.Single);
@@ -47,13 +45,6 @@ namespace DevTools.Editor
 				string additiveScenePath = AssetDatabase.GetAssetPath(additiveScene);
 				EditorSceneManager.OpenScene(additiveScenePath, OpenSceneMode.Additive);
 			}
-		}
-
-		private Settings GetSettings(string id)
-		{
-			var sceneGroup = settingsGroup.Where(x => x.Id == id).First();
-
-			return sceneGroup;
 		}
 	}
 }

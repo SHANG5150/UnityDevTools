@@ -10,16 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13abb092148fbd64d96274c8be69d727, type: 3}
-  m_Name: SceneStackSettings
+  m_Name: Environment
   m_EditorClassIdentifier: 
-  settingsGroup:
-  - Id: Startup
-    Single: {fileID: 102900000, guid: 7963f5b0a92158d4195a968ef5988752, type: 3}
-    AdditiveScenes: []
-  - Id: Environment
+  settings:
+    Id: Environment
     Single: {fileID: 102900000, guid: f32e6695a32dc5345afe9a35411c235a, type: 3}
     AdditiveScenes: []
-  - Id: Gameplay
-    Single: {fileID: 102900000, guid: f32e6695a32dc5345afe9a35411c235a, type: 3}
-    AdditiveScenes:
-    - {fileID: 102900000, guid: 36687ccc15fa9aa47bd43330bcd589f4, type: 3}
