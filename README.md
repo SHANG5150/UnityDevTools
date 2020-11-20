@@ -6,7 +6,7 @@ This package contain some of my frequently used feature while in development Uni
 
 To install this package, use the `"Add package from git URL..."` option from Unity Package Manager, and paste the link at below:
 
-`https://github.com/SHANG5150/UnityDevTools.git?path=/Assets/DevTools`
+`https://github.com/SHANG5150/UnityDevTools.git`
 
 ### Features
 
