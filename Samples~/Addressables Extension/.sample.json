@@ -1,0 +1,5 @@
+{
+	"displayName":"Addressable Extension",
+	"description": "Extend Addressables features.",
+	"createSeparatePackage": false
+}

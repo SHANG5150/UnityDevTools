@@ -1,0 +1,5 @@
+{
+	"displayName":"Example",
+	"description": "Example for DevTools usage.",
+	"createSeparatePackage": false
+}

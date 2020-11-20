@@ -1,0 +1,25 @@
+{
+	"name": "com.shang.unity-dev-tools",
+	"displayName": "Unity Dev Tools",
+	"version": "0.1.0",
+	"unity": "2019.4",
+	"description": "This package contain some of my frequently used feature while in development Unity project.",
+	"license": "MIT",
+	"author": {
+		"name": "SHANG5150",
+		"email": "f51509891@gmail.com",
+		"url": "https://github.com/SHANG5150"
+	},
+	"samples": [
+		{
+			"displayName": "Example",
+			"description": "Example for DevTools usage.",
+			"path": "Samples~/Example"
+		},
+		{
+			"displayName": "Addressables Extension",
+			"description": "Extend Addressables features.",
+			"path": "Samples~/Addressables Extension"
+		}
+	]
+}
