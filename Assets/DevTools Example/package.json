@@ -1,6 +1,6 @@
 {
     "name": "com.shang.unity-dev-tools-example",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "unity": "2019.4",
     "displayName": "Unity Dev Tools Example",
     "description": "This is a example usage based on Unity Dev Tools.",
@@ -10,7 +10,7 @@
         "url": "https://github.com/SHANG5150/UnityDevTools.git?path=/Assets/DevTools%20Example"
     },
     "dependencies": {
-        "com.shang.unity-dev-tools": "0.1.0"
+        "com.shang.unity-dev-tools": "0.1.1"
     },
     "author": {
         "name": "SHANG5150",

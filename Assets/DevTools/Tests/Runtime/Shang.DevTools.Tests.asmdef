@@ -1,9 +1,9 @@
 {
-    "name": "DevTools.Runtime.Tests",
+    "name": "Shang.DevTools.Tests",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "DevTools"
+        "Shang.DevTools"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

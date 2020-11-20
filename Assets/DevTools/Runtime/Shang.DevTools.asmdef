@@ -1,13 +1,7 @@
 {
-    "name": "DevTools.Editor",
-    "references": [
-        "DevTools",
-        "Unity.Addressables",
-        "Unity.Addressables.Editor"
-    ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "name": "Shang.DevTools",
+    "references": [],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
