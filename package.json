@@ -14,12 +14,12 @@
 		{
 			"displayName": "Example",
 			"description": "Example for DevTools usage.",
-			"path": "Samples/Example"
+			"path": "Samples~/Example"
 		},
 		{
 			"displayName": "Addressables Extension",
 			"description": "Extend Addressables features.",
-			"path": "Samples/Addressables Extension"
+			"path": "Samples~/Addressables Extension"
 		}
 	]
 }
