@@ -1,7 +1,7 @@
 {
 	"name": "com.shang.unity-dev-tools",
 	"displayName": "Unity Dev Tools",
-	"version": "0.3.0",
+	"version": "0.2.0",
 	"unity": "2019.4",
 	"description": "This package contain some of my frequently used feature while in development Unity project.",
 	"license": "MIT",
