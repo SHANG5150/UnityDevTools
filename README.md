@@ -23,6 +23,7 @@ To install this package, use the `"Add package from git URL..."` option from Uni
 - [Dont Destroy On Load](#dont-destroy-on-load)
 - [Asset Utility](#asset-utility)
 - [Package Exporter](#package-exporter)
+- [Open Application Path](#open-application-path)
 
 ----------
 
@@ -422,4 +423,16 @@ packageSettings = AssetUtility.FindScriptableObjectAssets<PackageExportSettings>
 var exporter = new PackageExporter(packageSettings.ExportInfo);
 
 exporter.Export();
+```
+
+### Open Application Path
+
+A shortcut to open `Application.xxxPath` folders on Unity menu item.
+
+Includes:
+```
+MenuItem/Tools/Open Application Path/Data Path
+MenuItem/Tools/Open Application Path/Persistent Data Path
+MenuItem/Tools/Open Application Path/Console Log Path
+MenuItem/Tools/Open Application Path/Temporary Cache Path
 ```
