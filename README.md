@@ -346,10 +346,12 @@ Create settings form:
 - Additive Scenes
     Scene reference in this list will open by `OpenSceneMode.Additive`.
 
-After setup `SceneStack` settigns, you can use `SceneStack.Factory` to open scene stack with Id.
+After setup `SceneStack` settigns, you can click `Open` button on `SceneStack` inspector to turn on scenes.
+
+Or use script to open scene stack with Id.
 
 ``` cs
-SceneStack.Factory.Create("Id").OpenSceneStack();
+SceneStack.OpenSceneStack("Id");
 ```
 
 ### Async Process

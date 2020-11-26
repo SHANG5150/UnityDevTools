@@ -10,14 +10,6 @@ namespace DevTools.Editor
 	[CreateAssetMenu(fileName = "new SceneStackSettings", menuName = "DevTools/SceneStack Settings", order = 0)]
 	public class SceneStack : ScriptableObject
 	{
-		public class Factory
-		{
-			public static SceneStack Create(string id)
-			{
-				return AssetUtility.FindScriptableObjectAssets<SceneStack>(x => x.settings.Id == id).First();
-			}
-		}
-
 		[Serializable]
 		public class Settings
 		{
@@ -32,6 +24,13 @@ namespace DevTools.Editor
 		public void Construct(Settings settings)
 		{
 			this.settings = settings;
+		}
+
+		public static void OpenSceneStack(string id)
+		{
+			var sceneStack = AssetUtility.FindScriptableObjectAssets<SceneStack>(x => x.settings.Id == id).First();
+
+			sceneStack.OpenSceneStack();
 		}
 
 		public void OpenSceneStack()
