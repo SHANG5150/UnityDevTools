@@ -30,7 +30,6 @@ namespace DevTools.Editor
 			this.settings = settings;
 		}
 
-		[ContextMenu("Build")]
 		public void Build()
 		{
 			Stopwatch stopwatch = Stopwatch.StartNew();

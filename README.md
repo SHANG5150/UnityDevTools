@@ -324,7 +324,9 @@ Currently, I have implement several build processes, you can create it from:
 - Build Player
     Build App with different settings.
 
-After you setup the build pipeline settings, you can right click on the scriptable object and select `Build` to trigger building process. Or you can use `AutoBuild` to run auto build process with Id.
+After you setup the build pipeline settings, you can click the `Build` button on the scriptable object to trigger building process.
+
+Or you can use `AutoBuild` to run auto build process with Id.
 
 ``` cs
 AutoBuild.Factory.Create().Build("Pipeline Settings Id");
