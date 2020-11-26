@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -28,6 +29,12 @@ namespace DevTools.Editor
 		public void Construct(Settings settings)
 		{
 			this.settings = settings;
+		}
+
+		public static void Export(string id)
+		{
+			PackageExport packageExport = AssetUtility.FindScriptableObjectAssets<PackageExport>(x => x.Id == id).First();
+			packageExport.Export();
 		}
 
 		[ContextMenu("Export")]

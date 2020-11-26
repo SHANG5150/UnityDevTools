@@ -421,12 +421,12 @@ Create `PackageExportSettings` scriptable object from:
 
 ###### Usage:
 
-After setup the `Package Export Settings`, you can trigger export process from the context menu option `Export`. 
+After setup the `Package Export Settings`, click `Export` button on the inspector of `Package Export Settings` to trigger export process.
 
 Or run the export process from script like below.
+
 ``` cs
-packageExport = AssetUtility.FindScriptableObjectAssets<PackageExport>(x => x.Id == "Setting Id").First();
-packageExporter.Export();
+PackageExport.Export("Setting id");
 ```
 
 ### Open Application Path
