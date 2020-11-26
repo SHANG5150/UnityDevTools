@@ -329,7 +329,7 @@ After you setup the build pipeline settings, you can click the `Build` button on
 Or you can use `AutoBuild` to run auto build process with Id.
 
 ``` cs
-AutoBuild.Factory.Create().Build("Pipeline Settings Id");
+AutoBuildPipeline.Build("Pipeline Settings Id");
 ```
 
 ### Switch Scene Shortcut

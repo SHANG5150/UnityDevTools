@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Text;
 using UnityEditor;
 using UnityEngine;
@@ -28,6 +29,13 @@ namespace DevTools.Editor
 		public void Construct(Settings settings)
 		{
 			this.settings = settings;
+		}
+
+		public static void Build(string id)
+		{
+			AutoBuildPipeline buildPipeline = AssetUtility.FindScriptableObjectAssets<AutoBuildPipeline>(x => x.Id == id).First();
+
+			buildPipeline.Build();
 		}
 
 		public void Build()
