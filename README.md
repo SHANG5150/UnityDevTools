@@ -320,11 +320,11 @@ Currently, I have implement several build processes, you can create it from:
     Switch to target platform.
 - Build Addressables Bundle
     Simply invoke Addressables to clear build bundle.
-    This process require add `USE_ADDRESSABLES` to `Scirpting Define Symbols` in `Project Settings/Player/Other Settings`.
+    This process located in package sample `Addressables Extension`.
 - Build Player
     Build App with different settings.
 
-After you setup the build pipeline settings, you can use `AutoBuild` to trigger auto build process with Id.
+After you setup the build pipeline settings, you can right click on the scriptable object and select `Build` to trigger building process. Or you can use `AutoBuild` to run auto build process with Id.
 
 ``` cs
 AutoBuild.Factory.Create().Build("Pipeline Settings Id");

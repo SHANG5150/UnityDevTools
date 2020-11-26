@@ -1,9 +1,5 @@
-﻿#if USE_ADDRESSABLES
-
-using UnityEditor.AddressableAssets;
+﻿using UnityEditor.AddressableAssets;
 using UnityEditor.AddressableAssets.Settings;
-
-#endif
 
 using UnityEngine;
 
@@ -16,13 +12,9 @@ namespace DevTools.Editor
 
 		public override void Process()
 		{
-#if USE_ADDRESSABLES
 			var dataBuilder = AddressableAssetSettingsDefaultObject.Settings.ActivePlayerDataBuilder;
 			AddressableAssetSettings.CleanPlayerContent(dataBuilder);
 			AddressableAssetSettings.BuildPlayerContent();
-#else
-			Debug.LogWarning("BuildAddressablesBundle Process will not perform, please add [USE_ADDRESSABLES] to Scripting Define Symbols.");
-#endif
 		}
 	}
 }
