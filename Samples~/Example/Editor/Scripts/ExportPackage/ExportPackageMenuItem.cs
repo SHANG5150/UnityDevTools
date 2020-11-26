@@ -9,11 +9,9 @@ namespace DevTools.Example.Editor
 		[MenuItem("Tools/Export Package/Dev Tools")]
 		public static void ExportDevTools()
 		{
-			PackageExportSettings packageSettings = AssetUtility.FindScriptableObjectAssets<PackageExportSettings>(x => x.Id == "DevTools").First();
+			PackageExport packageExport = AssetUtility.FindScriptableObjectAssets<PackageExport>(x => x.Id == "DevTools").First();
 
-			var exporter = new PackageExporter(packageSettings.ExportInfo);
-
-			exporter.Export();
+			packageExport.Export();
 		}
 	}
 }

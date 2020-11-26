@@ -418,11 +418,13 @@ Create `PackageExportSettings` scriptable object from:
       Check this option to open the output folder after export package.
 
 ###### Usage:
-``` cs
-packageSettings = AssetUtility.FindScriptableObjectAssets<PackageExportSettings>(x => x.Id == "Setting Id").First();
-var exporter = new PackageExporter(packageSettings.ExportInfo);
 
-exporter.Export();
+After setup the `Package Export Settings`, you can trigger export process from the context menu option `Export`. 
+
+Or run the export process from script like below.
+``` cs
+packageExport = AssetUtility.FindScriptableObjectAssets<PackageExport>(x => x.Id == "Setting Id").First();
+packageExporter.Export();
 ```
 
 ### Open Application Path

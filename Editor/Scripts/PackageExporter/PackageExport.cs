@@ -5,28 +5,36 @@ using UnityEngine;
 
 namespace DevTools.Editor
 {
-	public class PackageExporter
+	[CreateAssetMenu(fileName = "new PackageExportSettings", menuName = "DevTools/Package Export Settings", order = 0)]
+	public class PackageExport : ScriptableObject
 	{
 		[Serializable]
-		public class PackageExportInfo
+		public class Settings
 		{
+			public string Id;
 			public string PackageName;
 			public bool IncludeProjectVersion;
 			public string[] PackageAssetsPath;
 			public bool OpenFolderAfterExport;
 		}
 
-		private PackageExportInfo exportInfo;
+		[SerializeField]
+		private Settings settings;
 
-		public PackageExporter(PackageExportInfo exportInfo)
+		public string Id => settings.Id;
+
+		public Settings ExportSettings => settings;
+
+		public void Construct(Settings settings)
 		{
-			this.exportInfo = exportInfo;
+			this.settings = settings;
 		}
 
+		[ContextMenu("Export")]
 		public void Export()
 		{
 			string outputFolder = Path.Combine(Environment.CurrentDirectory, "Export", $"{DateTime.Now:yyyy_MMdd_HHmm}");
-			string packageName = exportInfo.PackageName + (exportInfo.IncludeProjectVersion ? $"_{Application.version}.unitypackage" : ".unitypackage");
+			string packageName = settings.PackageName + (settings.IncludeProjectVersion ? $"_{Application.version}.unitypackage" : ".unitypackage");
 			string outputPath = Path.Combine(outputFolder, packageName);
 
 			FileInfo outputFileInfo = new FileInfo(outputPath);
@@ -36,9 +44,9 @@ namespace DevTools.Editor
 				outputFileInfo.Directory.Create();
 			}
 
-			AssetDatabase.ExportPackage(exportInfo.PackageAssetsPath, outputPath, ExportPackageOptions.Recurse);
+			AssetDatabase.ExportPackage(settings.PackageAssetsPath, outputPath, ExportPackageOptions.Recurse);
 
-			if (exportInfo.OpenFolderAfterExport)
+			if (settings.OpenFolderAfterExport)
 			{
 				Application.OpenURL($"file:///{outputFileInfo.Directory.FullName}");
 			}
